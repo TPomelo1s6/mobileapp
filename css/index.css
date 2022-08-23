@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+html {
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    background-image: url(../img/bkImage.jpeg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 100vw;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 23px;
+    text-align: center;
+}
+
+/* フッター */
+footer {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    margin: 0px;
+    padding: 1px;
+    color: whitesmoke;
+    font: 16px Rajdhani;
+    text-align: center;
+    background: rgba(1, 24, 31, 0.7);
+}
+
+.app-wrap {
+    margin: 0 auto;
+    padding: 10px;
+    width: 800px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(1, 24, 31, 0.7);
+    border-radius: 10px 20px;
+}
+
+.app {
+    margin-left: 10px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 30px;
+    border-left: 10px solid #A6AAAB;
+}
+
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    user-select: none;
+    margin: 50px;
+    color: #000;
+    font-weight: bold;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-position: 75% 0%;
+        background-size: auto 900px;
+    }
+
+    .app-wrap {
+        width: 300px;
+        height: 500px;
+    }
+
+    a {
+        margin: 3%;
+        font-size: 12px;
+    }
+
+    .app {
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
