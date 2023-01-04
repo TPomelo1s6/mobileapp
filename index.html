@@ -1,28 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホームページ</title>
+    <title>Webアプリ</title>
+    <meta name="description" content="先生のサンプル（ゲーム）">
+
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <div class="app-wrap">
-            <p class="app">作りしたアプリ</p>
-            <a class="omikuji1" href="./01_おみくじ1/omikuji.html"><img src="./img/omikuji1-icon.png"><br>おみくじ1</a>
-            <a class="omikuji2" href="./01_おみくじ2/omikuji.html"><img src="./img/omikuji2-icon.png"><br>おみくじ2</a>
-            <a class="omikuji3" href="./01_おみくじ3/omikuji.html"><img src="./img/omikuji3-icon.png"><br>おみくじ3</a>
+    <div id="particles-js"></div>
+
+    <!-- 見出し（みだし） -->
+    <header class="header">
+        <h1>Webアプリ作成にチャレンジ中</h1>
+    </header>
+
+    <!-- 作成したアプリ -->
+    <section class="container01">
+        <h2>作成したアプリ</h2>
+        <div class="game">
+
+            <div class="container01-01">
+                <div class="item01">
+                    <a href="01_omikuji_v1/omikuji.html" title="今日の運勢を占うゲームです。"><img src="img/omikuji/omikuji1.png"
+                            alt="おみくじ１"><br>おみくじ１</a>
+                </div>
+                <div class="item01">
+                    <a href="01_omikuji_v2/omikuji.html" title="音付きです。"><img src="img/omikuji/omikuji2.png" alt="おみくじ２"
+                            class="img_omikuji2"><br>おみくじ２</a>
+                </div>
+                <div class="item01">
+                    <a href="01_omikuji_v3/omikuji.html" title="テキストも画像です。"><img src="img/omikuji/omikuji3.png"
+                            alt="おみくじ３"><br>おみくじ３</a>
+                </div>
+            </div>
+
+            <div class="container01-02">
+                <div class="item01">
+                    <a href="02_calculator_v1/calculator.html" title="かんたんな計算機です。"><img src="img/calc/calc1.png"
+                            alt="計算機１"><br>計算機１</a>
+                </div>
+
+                <div class="item01">
+                    <a href="02_calculator_v2/calculator.html" title="=ボタンをつけた計算機です。"><img src="img/calc/calc2.png"
+                            alt="計算機２"><br>計算機２</a>
+                </div>
+
+                <div class="item01">
+                    <a href="02_calculator_v3/calculator_button.html" title="=全部ボタンの計算機です。"><img
+                            src="img/calc/calc3.png" alt="計算機３"><br>計算機３</a>
+                </div>
+
+                <div class="item01">
+                    <a href="03_timeguess/timeguess.html" title="=時間当てクイズです"><img src="img/timeguess/clock.png"
+                            alt="クイズ">時間当て<br>クイズ</a>
+                </div>
+            </div>
+
+            <div class="container01-03">
+                <div class="item01">
+                    <a href="04_memo/memo.html" title="メモアプリです。"><img src="img/memo/memo.png" alt="memo"><br>memo</a>
+                </div>
+
+                <div class="item01">
+                    <a href="04_memo_app_v1/memo.html" title="メモアプリv1です。"><img src="img/memo/memo1.png"
+                            alt="memo v1"><br>memo v1</a>
+                </div>
+
+                <div class="item01">
+                    <a href="04_memo_app_v2/memo.html" title="メモアプリv2です。"><img src="img/memo/memo2.png"
+                            alt="memo v2"><br>memo v2</a>
+                </div>
+
+                <div class="item01">
+                    <a href="04_memo_app_v3/memo.html" title="メモアプリv3です。"><img src="img/memo/memo3.png"
+                            alt="memo v3"><br>memo v3</a>
+                </div>
+            </div>
+
+            <div class="container01-04">
+                <div class="item02">
+                    <a href="05_tic_tac_toe/tic_tac_toe.html" title="2人でやるゲームです。"><img src="img/OXGame/ox1.png"
+                            alt="〇✖ゲーム"><br>〇✖ゲーム</a>
+                </div>
+
+                <div class="item02">
+                    <a href="05_tic_tac_toe_vs computer/tic_tac_toe.html" title="vs computerです。"><img
+                            src="img/OXGame/ox2.png" alt="〇✖ゲームvs computer"><br>〇✖ゲームvs computer</a>
+                </div>
+
+                <div class="item02">
+                    <a href="07_tic tac toe vs computer level/tic_tac_toe_vs computer.html"
+                        title="vs computer level付き。"><img src="img/OXGame/ox3.png" alt="〇✖ゲーム"><br>〇✖ゲームvs
+                        computer<br>level設定</a>
+                </div>
+
+            </div>
+
         </div>
-        <footer>
-            <p>copyright 2022 ショウ　セイ</p>
-        </footer>
-    </div>
+        <div class="filler01"></div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>© Copyright 2022 ショウ　セイ</p>
+    </footer>
+
+    <!-- 背景の粒効果 -->
+    <script src="./assets/particles.min.js"></script>
+    <script src="./js/index.js"></script>
+
 </body>
 
 </html>

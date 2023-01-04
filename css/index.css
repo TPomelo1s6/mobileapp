@@ -1,104 +1,197 @@
 @charset "utf-8";
 
 html {
-    font-size: 16px;
+    font-size: 62.5%;
 }
 
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    line-height: 1.5;
+    color: rgb(73, 72, 72);
+    font-size: 1.6rem;
+    /* 16px */
     font-family: "Helvetica Neue",
         Arial,
         "Hiragino Kaku Gothic ProN",
         "Hiragino Sans",
         Meiryo,
         sans-serif;
-    background-image: url(../img/bkImage.jpeg);
+    text-align: center;
+    background-color: #28272a;
     background-size: cover;
     overflow: hidden;
 }
 
-p {
-    margin: 0;
-    padding: 0;
+header,
+footer,
+h1,
+h2,
+h3,
+p,
+div,
+.container01,
+.filler01 {
+    margin: 0.2em 0em 0em 0em;
+    padding: 0.1em;
 }
 
+img {
+    border-radius: 12px;
+}
+
+/*****************************/
+/* 見出し（みだし）           */
+/*****************************/
+h1 {
+    font: 2em Rajdhani, "Noto Sans JP";
+    color: #333;
+    border-radius: 8px;
+    background-image: radial-gradient(circle 248px at center, #ece5da 0%, #cac3b8 47%, #a8a196 100%);
+}
+
+h2 {
+    padding-left: 0.5em;
+    border-left: solid 0.5em #ddd;
+    text-align: left;
+    color: #eee;
+}
+
+/*****************************/
+/* ページ                    */
+/*****************************/
 .wrapper {
+    position: relative;
+    /*相対位置*/
     max-width: 100vw;
+    /*すべての要素をbox-sizing:border-boxとしているので全て含めてmin-width:100vwに*/
     min-height: 100vh;
-    padding-top: 100px;
+    /*すべての要素をbox-sizing:border-boxとしているので全て含めてmin-height:100vhに*/
+    margin: 0;
+    padding: 0;
     padding-bottom: 23px;
+    /*footer+paddingの高さ*/
     text-align: center;
 }
 
+/*****************************/
+/* セクション(section)        */
+/*****************************/
+.container01 {
+    margin: 20px auto;
+    padding-left: 0.5em;
+    width: 80%;
+    border-radius: 0.5em 1.5em;
+    background-color: rgba(202, 195, 284, 0.4);
+    /* box-shadow: 0 0 0.5em rgb(223, 222, 222); */
+}
+
+main>p {
+    font: 1.2em bold;
+}
+
+/*****************************/
+/* アンカー(anchor)           */
+/*****************************/
+a {
+    color: #fff;
+    font-weight: 900;
+    text-decoration: none;
+    /* https://developer.mozilla.org/ja/docs/Web/CSS/text-decoration */
+}
+
+/* mouseoverでグレースケール */
+a:hover {
+    opacity: 0.5;
+    filter: grayscale(25%);
+}
+
+/*****************************/
+/* container  item           */
+/*****************************/
+.container01-01,
+.container01-02,
+.container01-03,
+.container01-04 {
+    display: flex;
+    /*https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout*/
+    flex-wrap: wrap;
+    /*https://developer.mozilla.org/ja/docs/Web/CSS/flex-wrap*/
+    justify-content: space-evenly;
+    /*https://developer.mozilla.org/ja/docs/Web/CSS/justify-content*/
+    font-size: 0.7em;
+}
+
+.item01 {
+    position: relative;
+    width: 6em;
+    height: 9em;
+    margin: 0;
+    line-height: 1em;
+    overflow: hidden;
+}
+
+.item02 {
+    position: relative;
+    width: 6em;
+    height: 12em;
+    margin: 0;
+    line-height: 1em;
+    overflow: hidden;
+}
+
+.item01 img,
+.item02 img {
+    width: 6em;
+    height: auto;
+}
+
+.item01 .img_omikuji2 {
+    width: auto;
+    height: 6em;
+    overflow: hidden;
+}
+
 /* フッター */
+
 footer {
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     width: 100%;
     margin: 0px;
     padding: 1px;
     color: whitesmoke;
     font: 16px Rajdhani;
     text-align: center;
-    background: rgba(1, 24, 31, 0.7);
+    background: #839a9b;
 }
 
-.app-wrap {
-    margin: 0 auto;
-    padding: 10px;
-    width: 800px;
-    height: 500px;
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 10px rgba(1, 24, 31, 0.7);
-    border-radius: 10px 20px;
+#particles-js {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.app {
-    margin-left: 10px;
-    text-align: left;
-    padding-left: 10px;
-    font-size: 30px;
-    border-left: 10px solid #A6AAAB;
-}
-
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    user-select: none;
-    margin: 50px;
-    color: #000;
-    font-weight: bold;
-}
-
-img {
-    width: 50px;
-    height: 50px;
-}
-
+/* mobileのときのスタイル */
 @media screen and (max-width: 480px) {
     body {
-        background-position: 75% 0%;
-        background-size: auto 900px;
+        background-size: auto 812px;
     }
 
-    .app-wrap {
-        width: 300px;
-        height: 500px;
+    h1 {
+        font-size: 2rem;
     }
 
-    a {
-        margin: 3%;
-        font-size: 12px;
-    }
-
-    .app {
-        font-size: 22px;
-        font-weight: bold;
+    .container01 {
+        width: 90%;
     }
 }
